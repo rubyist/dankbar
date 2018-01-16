@@ -49,6 +49,7 @@ func main() {
 	f, _ := os.Open("/home/scott/.config/dankbar/config.json")
 	var show []string
 	json.NewDecoder(f).Decode(&show)
+	f.Close()
 
 	fmt.Fprintf(os.Stdout, "{\"version\":1}\n[[]")
 
